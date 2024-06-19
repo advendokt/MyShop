@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advendokt Tech Repair</title>
+    <link rel="stylesheet" type="text/css" href="stylecss.css">
+</head>
+
+
+<body>
+
+    <header>
+            <!-- Логотип и заголовок -->
+            
+            <h1>Advendokt IT-Tech</h1>
+            <!-- Социальные иконки -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank"><img src="FB.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                <a href="https://discord.gg/DWbEH4HGDa" target="_blank"><img src="discord2.png" alt="Discord"></a>
+            </div>
+        <!-- Кнопки для смены языка -->
+        <div class="language-buttons">
+            <button onclick="changeLanguage('en')"><img src="ENG.png" alt="English Flag"></button>
+            <button onclick="changeLanguage('et')"><img src="ET.png" alt="Estonian Flag"></button>
+            <button onclick="changeLanguage('ru')"><img src="RUS.png" alt="Russian Flag"></button>
+        </div>
+        <div id="numberRain"></div>
+        <div class="falling-number">42</div>
+    </header>
+
+    <nav>
+        <button class="button" data-section="infoSection">Info</button>
+        <button class="button" data-section="homepageSection">Home</button>
+        <button class="button" data-section="repairServicesSection">Repair Services</button>
+        <button class="button" data-section="aboutUsSection">About Us</button>
+        <button class="button" data-section="contactSection">Contact</button>
+        <button class="button" data-section="gallerySection">Gallery</button>
+        <button class="button" data-section="reviewsSection">Reviews</button>
+    </nav>
+
+    <main>
+        <section id="infoSection" class="section">
+            <div class="container">
+                <h2>Welcome to Advendokt IT-Tech</h2>
+                <p>
+                    At Advendokt IT-Tech, we specialize in providing expert solutions for all your tech needs. Whether you're looking for repairs, upgrades, or IT services, we've got you covered.
+                </p>
+                <p>
+                    Explore our website and discover a range of services tailored to enhance your digital experience. Contact us today to get started!
+                </p>
+                <!-- Button to scroll to the services section -->
+                <a data-section="repairServicesSection" class="button">Explore Services</a>
+            </div>
+        </section>
+
+        <section id="homepageSection" class="section">
+            <div class="container">
+                <h2>Quality Tech Repairs</h2>
+                <p>
+                    We specialize in repairing a wide range of devices, including PCs, smartphones, laptops, and other IT systems. Our team of skilled technicians is dedicated to providing top-quality repair services. Whether it's a hardware issue, a software problem, or an upgrade, we've got you covered.
+                </p>
+                <p>
+                    We use the latest technology and high-quality parts to ensure your devices are in great condition. Your satisfaction is our priority, and we strive to make your tech repair experience seamless.
+                </p>
+        
+                <!-- Advantages Section -->
+                <div class="advantages">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li>Fast and reliable repairs</li>
+                        <li>Experienced technicians</li>
+                        <li>High-quality parts</li>
+                        <li>Transparent pricing</li>
+                        <li>Excellent customer service</li>
+                    </ul>
+                </div>
+
+                <div class="specialists">
+                    <h3>Meet Our Specialists</h3>
+                    <div class="specialist">
+                        <img src="specialist1.jpg" alt="Specialist 1">
+                        <h4>John Doe</h4>
+                        <p>Hardware Expert</p>
+                    </div>
+                    <div class="specialist">
+                        <img src="specialist2.jpg" alt="Specialist 2">
+                        <h4>Jane Smith</h4>
+                        <p>Software Guru</p>
+                    </div>
+                    <div class="specialist">
+                        <img src="specialist3.jpg" alt="Specialist 3">
+                        <h4>Mike Johnson</h4>
+                        <p>Mobile Repair Specialist</p>
+                    </div>
+                </div>
+        
+                <!-- FAQ Section -->
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="question">
+                        <h4>What types of devices do you repair?</h4>
+                        <p>We repair a wide range of devices, including PCs, laptops, smartphones, tablets, and other IT systems.</p>
+                    </div>
+                    <div class="question">
+                        <h4>How long does a typical repair take?</h4>
+                        <p>The repair time can vary depending on the issue, but we strive to complete repairs as quickly as possible without compromising quality.</p>
+                    </div>
+                    <div class="question">
+                        <h4>Do you offer warranty on repairs?</h4>
+                        <p>Yes, we provide warranty on our repairs. Please contact us for more details.</p>
+                    </div>
+                </div>
+        
+                <!-- Call to Action -->
+                <div class="cta">
+                    <h3>Ready to get your device repaired?</h3>
+                    <p>Contact us today to schedule a repair service or request a quote!</p>
+                    <a data-section="contactSection" class="button">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="repairServicesSection" class="section">
+            <div class="container">
+                <h2>Repair Services</h2>
+                <table id="repairTable">
+                    <thead>
+                        <tr>
+                            <th>Device</th>
+                            <th>Repair Type</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PC</td>
+                            <td data-tooltip="Testing - Comprehensive testing of hardware and software components to diagnose issues and identify problems.">Testing</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>Smartphone</td>
+                            <td data-tooltip="Battery Replacement - Replacement of the device's battery with a new one to restore battery performance.">Battery Replacement</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>Smartphone</td>
+                            <td data-tooltip="Screen Replacement - Replacement of the damaged screen with a new screen assembly. Cost includes the price of the screen.">Screen Replacement</td>
+                            <td>$50 + cost of screen</td>
+                        </tr>
+                        <tr>
+                            <td>Smartphone</td>
+                            <td data-tooltip="Camera Repair - Repair or replacement of the device's camera module to restore camera functionality.">Camera Repair</td>
+                            <td>$60</td>
+                        </tr>
+                        <tr>
+                            <td>Laptop</td>
+                            <td data-tooltip="Charging Port Repair - Repair or replacement of the charging port to restore charging capability.">Charging Port Repair</td>
+                            <td>$70</td>
+                        </tr>
+                        <tr>
+                            <td>Laptop</td>
+                            <td data-tooltip="Hard Drive Upgrade - Installation of a new hard drive with larger capacity to upgrade storage.">Hard Drive Upgrade</td>
+                            <td>$120</td>
+                        </tr>
+                        <tr>
+                            <td>Other IT Systems</td>
+                            <td data-tooltip="Hardware Repair - Comprehensive repair services for other IT systems. Contact us for more details.">Hardware Repair</td>
+                            <td>By request</td>
+                        </tr>
+                        <tr>
+                            <td>Complex PC</td>
+                            <td data-tooltip="System Repair - Advanced repair services for complex PC issues. Includes diagnostics and repair.">System Repair</td>
+                            <td>By request + $150</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="tooltip"></div>
+            </div>
+        </section>
+
+        <section id="aboutUsSection" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>
+                    At Tech Repair Shop, we are passionate about providing top-notch repair services for all your electronic devices. With years of experience, our skilled technicians are dedicated to fixing your devices efficiently and with care.
+                </p>
+                <p>
+                    We use high-quality parts and the latest technology to ensure the best results. Customer satisfaction is our top priority, and we strive to make your tech repair experience as seamless as possible.
+                </p>
+                <h3>Our Team</h3>
+                <p>
+                    Our team consists of certified professionals with expertise in various areas of IT and electronics repair. We are committed to delivering exceptional service and solutions tailored to your needs.
+                </p>
+                <!-- Additional Content -->
+                <h3>Why Choose Us?</h3>
+                <ul>
+                    <li>Experienced and certified technicians</li>
+                    <li>High-quality parts and advanced repair techniques</li>
+                    <li>Customer-focused approach</li>
+                    <li>Transparent pricing and no hidden fees</li>
+                    <li>Fast turnaround time</li>
+                    <li>Convenient location and flexible scheduling</li>
+                </ul>
+                <h3>Our Mission</h3>
+                <p>
+                    Our mission is to provide reliable, efficient, and affordable repair services while ensuring the highest level of customer satisfaction. We aim to become your trusted partner for all your tech repair needs.
+                </p>
+            </div>
+        </section>
+
+        <section id="contactSection" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need assistance, please contact us at <a href="mailto:support@example.com">support@example.com</a>.</p>
+        
+                <!-- Contact Form -->
+                <form id="contactForm">
+                    <div>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+        
+                <!-- Feedback Message -->
+                <div id="feedbackMessage"></div>
+            </div>
+        </section>
+
+        <section id="gallerySection" class="section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery">
+                    <img src="image1.jpg" alt="Gallery Image 1">
+                    <img src="image2.jpg" alt="Gallery Image 2">
+                    <img src="image3.jpg" alt="Gallery Image 3">
+                    <!-- Add more images here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="reviewsSection" class="section">
+            <div class="container">
+                <h2>Customer Reviews</h2>
+                <section id="addReviewSection">
+                    <h3>Leave a Review</h3>
+                    <form id="reviewForm">
+                        <input type="text" id="name" placeholder="Your Name" required><br>
+                        <textarea id="message" placeholder="Your Review" required></textarea><br>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <span class="star-input" data-rating="1">&#9733;</span>
+                                <span class="star-input" data-rating="2">&#9733;</span>
+                                <span class="star-input" data-rating="3">&#9733;</span>
+                                <span class="star-input" data-rating="4">&#9733;</span>
+                                <span class="star-input" data-rating="5">&#9733;</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="ratingInput" value="">
+                        <button type="submit">Submit Review</button>
+                    </form>
+                </section>
+                <div id="reviewsList"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scriptt.js"></script>
+</body>
+
+</html>

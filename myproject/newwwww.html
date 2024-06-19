@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lihtne Intressiarvutus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Lihtne Intressiarvutus</h2>
+        <label for="principal">Põhisumma (EUR):</label>
+        <input type="number" id="principal" placeholder="Sisesta põhisumma">
+        <br>
+        <label for="rate">Intressimäär (% aastas):</label>
+        <input type="number" id="rate" placeholder="Sisesta intressimäär">
+        <br>
+        <label for="time">Aeg (aastad):</label>
+        <input type="number" id="time" placeholder="Sisesta aeg aastates">
+        <br>
+        <button onclick="calculateInterest()">Arvuta Intress</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateInterest() {
+    // Saame sisendväljadest väärtused
+    const principal = parseFloat(document.getElementById('principal').value);
+    const rate = parseFloat(document.getElementById('rate').value);
+    const time = parseFloat(document.getElementById('time').value);
+
+    // Arvutame lihtsa intressi summa
+    const interest = (principal * rate * time) / 100;
+
+    // Kuvame tulemus kasutajale
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = `Lihtne intress summas ${interest.toFixed(2)} eurot.`;
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juhuslik Õnnenumber</title>
+</head>
+<body>
+    <button id="genereeriNupp">Genereeri Õnnenumber</button>
+    <p id="tulemus"></p>
+
+    <script>
+        // Funktsioon, mis genereerib ja kontrollib õnnenumbrit
+        function genereeriOnnenumber() {
+            var min = 1;
+            var max = 64;
+            var juhuslikArv = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            if (juhuslikArv !== 13 && juhuslikArv % 7 !== 0) {
+                return juhuslikArv + " on õnnenumber!";
+            } else {
+                return juhuslikArv + " ei ole õnnenumber.";
+            }
+        }
+
+        // Leia nupp ja tulemuse element
+        var genereeriNupp = document.getElementById("genereeriNupp");
+        var tulemusElement = document.getElementById("tulemus");
+
+        // Lisa nupule klõpsamise kuulaja
+        genereeriNupp.addEventListener("click", function () {
+            var tulemus = genereeriOnnenumber();
+            tulemusElement.innerHTML = "Veeretasid " + tulemus;
+        });
+    </script>
+</body>
+</html>

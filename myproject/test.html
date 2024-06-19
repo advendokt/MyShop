@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Rain</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling for this demo */
+        }
+        
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 100px; /* Space below header for falling numbers */
+            height: 200px; /* Adjust height to control space for falling numbers */
+        }
+        
+        #numberRain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Prevent interaction with numbers */
+        }
+        
+        .falling-number {
+            position: absolute;
+            left: calc(50% - 10px); /* Center horizontally under header text */
+            color: #ffc107;
+            font-size: 24px;
+            animation: fall linear var(--fall-duration) infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                top: 100%; /* Fall to the bottom of the header */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Random Number Rain</h1>
+        <div id="numberRain"></div>
+    </header>
+
+    <script>
+        // Function to generate random numbers
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * 10); // Random number between 0 and 9
+        }
+
+        // Function to create a falling number element
+        function createFallingNumber() {
+            const numberElement = document.createElement('div');
+            numberElement.textContent = generateRandomNumber();
+            numberElement.classList.add('falling-number');
+
+            // Randomize fall duration
+            numberElement.style.setProperty('--fall-duration', `${Math.random() * 4 + 2}s`); // Random duration between 2 and 6 seconds
+
+            return numberElement;
+        }
+
+        // Function to start the number rain
+        function startNumberRain() {
+            const numberRain = document.getElementById('numberRain');
+
+            // Create falling numbers continuously
+            setInterval(() => {
+                const fallingNumber = createFallingNumber();
+                numberRain.appendChild(fallingNumber);
+
+                // Clean up numbers that have fallen off the screen
+                setTimeout(() => {
+                    numberRain.removeChild(fallingNumber);
+                }, 7000); // Remove after 7 seconds (adjust as needed)
+            }, 300); // Interval for creating new numbers (adjust as needed)
+        }

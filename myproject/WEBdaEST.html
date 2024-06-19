@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advendokt IT-Tech</title>
+    <link rel="stylesheet" type="text/css" href="stylecss.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content container">
+            <h1>Advendokt IT-Tech</h1>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank"><img src="FB.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                <a href="https://discord.gg/DWbEH4HGDa" target="_blank"><img src="discord2.png" alt="Discord"></a>
+            </div>
+        </div>
+        <button onclick="changeLanguage('en')"><img src="ENG.png" alt="English Flag"></button>
+        <button onclick="changeLanguage('et')"><img src="ET.png" alt="Estonian Flag"></button>
+        <button onclick="changeLanguage('ru')"><img src="RUS.png" alt="English Flag"></button>
+        <div id="numberRain"></div>
+        <div class="falling-number">42</div>
+    </header>
+
+    <nav>
+        <button class="button" data-section="infoSection">Info</button>
+        <button class="button" data-section="homepageSection">Avaleht</button>
+        <button class="button" data-section="repairServicesSection">Remondi teenused</button>
+        <button class="button" data-section="aboutUsSection">Meist</button>
+        <button class="button" data-section="contactSection">Kontakt</button>
+        <button class="button" data-section="gallerySection">Galerii</button>
+        <button class="button" data-section="reviewsSection">Arvustused</button>
+    </nav>
+
+    <main>
+        <section id="infoSection" class="section">
+            <div class="container">
+                <h2>Tere tulemast Advendokt IT-Tech'i</h2>
+                <p>
+                    Advendokt IT-Tech spetsialiseerub ekspertlahenduste pakkumisel kõigile teie tehnoloogilistele vajadustele. Olgu tegemist remondi-, täiustus- või IT-teenustega, meil on teid kaetud.
+                </p>
+                <p>
+                    Avastage meie veebisait ja leidke valik teenuseid, mis on loodud teie digitaalse kogemuse parendamiseks. Alustamiseks võtke meiega täna ühendust!
+                </p>
+                <!-- Nupp teenuste sektsiooni kerimiseks -->
+                <a data-section="repairServicesSection" class="button">Uuri teenuseid</a>
+            </div>
+        </section>
+
+        <section id="homepageSection" class="section">
+            <div class="container">
+                <h2>Kvaliteetsed tehnoloogia remondid</h2>
+                <p>
+                    Meie spetsialiseerume laia valiku seadmete remontimisel, sealhulgas arvutid, nutitelefonid, sülearvutid ja muud IT-süsteemid. Meie kogenud tehnikute meeskond on pühendunud tipptasemel remonditeenuste pakkumisele. Olgu tegemist riistvara-, tarkvara- või täiustustöödega, meil on teid kaetud.
+                </p>
+                <p>
+                    Kasutame uusimat tehnoloogiat ja kvaliteetseid komponente, et tagada teie seadmete suurepärane seisukord. Teie rahulolu on meie prioriteet ning püüame muuta teie tehnoloogia remondi kogemuse sujuvaks.
+                </p>
+        
+                <!-- Eelised sektsioon -->
+                <div class="advantages">
+                    <h3>Miks valida meid?</h3>
+                    <ul>
+                        <li>Kiired ja usaldusväärsed remontid</li>
+                        <li>Kogenud tehnikud</li>
+                        <li>Kvaliteetsed komponendid</li>
+                        <li>Läbipaistev hinnakujundus</li>
+                        <li>Suurepärane klienditeenindus</li>
+                    </ul>
+                </div>
+
+                <div class="specialists">
+                    <h3>Kohtuge meie spetsialistidega</h3>
+                    <div class="specialist">
+                        <img src="specialist1.jpg" alt="Spetsialist 1">
+                        <h4>John Doe</h4>
+                        <p>Riistvaraspetsialist</p>
+                    </div>
+                    <div class="specialist">
+                        <img src="specialist2.jpg" alt="Spetsialist 2">
+                        <h4>Jane Smith</h4>
+                        <p>Tarkvaraguru</p>
+                    </div>
+                    <div class="specialist">
+                        <img src="specialist3.jpg" alt="Spetsialist 3">
+                        <h4>Mike Johnson</h4>
+                        <p>Mobiiliremondi spetsialist</p>
+                    </div>
+                </div>
+        
+                <!-- KKK sektsioon -->
+                <div class="faq">
+                    <h3>Sagedased küsimused</h3>
+                    <div class="question">
+                        <h4>Milliseid seadmeid te remondite?</h4>
+                        <p>Remondime laia valikut seadmeid, sealhulgas arvuteid, sülearvuteid, nutitelefone, tahvelarvuteid ja muid IT-süsteeme.</p>
+                    </div>
+                    <div class="question">
+                        <h4>Kui kaua tüüpiline remont võtab aega?</h4>
+                        <p>Remondiaeg võib sõltuvalt probleemist varieeruda, kuid püüame remonti teha võimalikult kiiresti ilma kvaliteeti ohverdamata.</p>
+                    </div>
+                    <div class="question">
+                        <h4>Kas pakute remondile garantii?</h4>
+                        <p>Jah, pakume garantiid meie remonditöödele. Lisateabe saamiseks võtke meiega ühendust.</p>
+                    </div>
+                </div>
+        
+                <!-- Kutsung tegevusele -->
+                <div class="cta">
+                    <h3>Kas teie seade vajab remonti?</h3>
+                    <p>Võtke meiega täna ühendust, et planeerida remonditeenus või taotleda hinnapakkumist!</p>
+                    <a data-section="contactSection" class="button">Võta ühendust</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="repairServicesSection" class="section">
+            <div class="container">
+                <h2>Remonditeenused</h2>
+                <table id="repairTable">
+                    <thead>
+                        <tr>
+                            <th>Seade</th>
+                            <th>Remondi tüüp</th>
+                            <th>Hind</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arvuti</td>
+                            <td data-tooltip="Põhjalik riistvara ja tarkvara komponentide testimine probleemide diagnoosimiseks ja tuvastamiseks.">Testimine</td>
+                            <td>100 €</td>
+                        </tr>
+                        <tr>
+                            <td>Nutitelefon</td>
+                            <td data-tooltip="Aku vahetus - Vahetage seadme aku uue vastu, et taastada aku jõudlus.">Aku vahetus</td>
+                            <td>50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Nutitelefon</td>
+                            <td data-tooltip="Ekraani vahetus - Kahjustatud ekraani vahetus uue ekraani komplektiga. Hind sisaldab ekraani hinda.">Ekraani vahetus</td>
+                            <td>50 € + ekraani hind</td>
+                        </tr>
+                        <tr>
+                            <td>Nutitelefon</td>
+                            <td data-tooltip="Kaamera remont - Seadme kaameramooduli remont või vahetus kaamera funktsionaalsuse taastamiseks.">Kaamera remont</td>
+                            <td>60 €</td>
+                        </tr>
+                        <tr>
+                            <td>Sülearvuti</td>
+                            <td data-tooltip="Laadimisporti remont - Laadimisvõime taastamiseks laadimisporti remont või vahetus.">Laadimisporti remont</td>
+                            <td>70 €</td>
+                        </tr>
+                        <tr>
+                            <td>Sülearvuti</td>
+                            <td data-tooltip="Kõvaketta täiustamine - Uue kõvaketta paigaldamine suurema mahutavusega salvestusruumi saamiseks.">Kõvaketta täiustamine</td>
+                            <td>120 €</td>
+                        </tr>
+                        <tr>
+                            <td>Muud IT-süsteemid</td>
+                            <td data-tooltip="Riistvara remont - Üldised remonditeenused muudele IT-süsteemidele. Lisateabe saamiseks võtke meiega ühendust.">Riistvara remont</td>
+                            <td>Küsi hinda</td>
+                        </tr>
+                        <tr>
+                            <td>Kompleksne arvuti</td>
+                            <td data-tooltip="Süsteemi remont - Täiustatud remonditeenused keerukate arvutiprobleemide jaoks. Sisaldab diagnostikat ja remonti.">Süsteemi remont</td>
+                            <td>Küsi hinda + 150 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="tooltip"></div>
+            </div>
+        </section>
+
+        <section id="aboutUsSection" class="section">
+            <div class="container">
+                <h2>Meist</h2>
+                <p>
+                    Tech Repair Shopis oleme kirglikud tipptasemel remonditeenuste pakkumisel kõigile teie elektroonikaseadmetele. Meie kogenud tehnikud on pühendunud teie seadmete tõhusale ja hoolikale parandamisele.
+                </p>
+                <p>
+                    Kasutame kvaliteetseid osi ja uusimat tehnoloogiat parimate tulemuste saavutamiseks. Kliendi rahulolu on meie peamine prioriteet ning püüame muuta teie tehnoloogia remondi kogemuse võimalikult sujuvaks.
+                </p>
+                <h3>Meie meeskond</h3>
+                <p>
+                    Meie meeskond koosneb sertifitseeritud spetsialistidest erinevates IT ja elektroonika remondi valdkondades. Oleme pühendunud silmapaistva teenuse ja teie vajadustele kohandatud lahenduste pakkumisele.
+                </p>
+                <!-- Lisasisu -->
+                <h3>Miks valida meid?</h3>
+                <ul>
+                    <li>Kogenud ja sertifitseeritud tehnikud</li>
+                    <li>Kvaliteetsed osad ja arenenud remonditehnikad</li>
+                    <li>Kliendirõhutatud lähenemine</li>
+                    <li>Läbipaistev hinnakujundus ja varjatud tasudeta</li>
+                    <li>Kiire reageerimisaeg</li>
+                    <li>Mugav asukoht ja paindlik ajakava</li>
+                </ul>
+                <h3>Meie missioon</h3>
+                <p>
+                    Meie missiooniks on pakkuda usaldusväärseid, efektiivseid ja taskukohaseid remonditeenuseid, tagades samal ajal kõrgeima kliendirahulolu taseme. Oleme pühendunud saama teie usaldusväärseks partneriks kõigis teie tehnoloogia remondi vajadustes.
+                </p>
+            </div>
+        </section>
+
+        <section id="contactSection" class="section">
+            <div class="container">
+                <h2>Võta meiega ühendust</h2>
+                <p>Kui teil on küsimusi või vajate abi, võtke meiega ühendust aadressil <a href="mailto:support@example.com">support@example.com</a>.</p>
+        
+                <!-- Kontaktvorm -->
+                <form id="contactForm">
+                    <div>
+                        <label for="name">Teie nimi:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Teie e-post:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Sõnum:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Saada sõnum</button>
+                </form>
+        
+                <!-- Tagasiside sõnum -->
+                <div id="feedbackMessage"></div>
+            </div>
+        </section>
+
+        <section id="gallerySection" class="section">
+            <div class="container">
+                <h2>Galerii</h2>
+                <div class="gallery">
+                    <img src="image1.jpg" alt="Galerii pilt 1">
+                    <img src="image2.jpg" alt="Galerii pilt 2">
+                    <img src="image3.jpg" alt="Galerii pilt 3">
+                    <!-- Lisage siia rohkem pilte -->
+                </div>
+            </div>
+        </section>
+
+        <section id="reviewsSection" class="section">
+            <div class="container">
+                <h2>Kliendi arvustused</h2>
+                <section id="addReviewSection">
+                    <h3>Jäta arvustus</h3>
+                    <form id="reviewForm">
+                        <input type="text" id="name" placeholder="Teie nimi" required><br>
+                        <textarea id="message" placeholder="Teie arvustus" required></textarea><br>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <span class="star-input" data-rating="1">&#9733;</span>
+                                <span class="star-input" data-rating="2">&#9733;</span>
+                                <span class="star-input" data-rating="3">&#9733;</span>
+                                <span class="star-input" data-rating="4">&#9733;</span>
+                                <span class="star-input" data-rating="5">&#9733;</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="ratingInput" value="">
+                        <button type="submit">Saada arvustus</button>
+                    </form>
+                </section>
+                <div id="reviewsList"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scriptt.js"></script>
+</body>
+
+</html>

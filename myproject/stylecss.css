@@ -1,0 +1,607 @@
+/* General Reset and Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#numberRain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with numbers */
+}
+
+.falling-number {
+    position: absolute;
+    top: -50px; /* Start above the header */
+    left: calc(100% * var(--random-x)); /* Random horizontal position */
+    color: #ffffff;
+    font-size: 24px;
+    animation: fall linear var(--fall-duration) infinite;
+    z-index: 5;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #343a40;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content Section Styles */
+main {
+    padding: 20px 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Section Titles */
+h2 {
+    color: #007bff;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Text Content */
+p {
+    line-height: 1.6;
+}
+
+
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+#infoSection p {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5); /* Configure initial text shadow */
+    animation: glowing 3s infinite; 
+}
+
+
+#infoSection h2 {
+    color: #ffffff; 
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5); /* Configure initial text shadow */
+    animation: glowing 3s infinite; 
+}
+#infoSection h2 {
+    animation: glowing 2s infinite;
+}
+
+
+#infoSection {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 80px 0; 
+    text-align: center; 
+}
+
+#infoSection h2 {
+    font-size: 36px; 
+    margin-bottom: 20px; 
+}
+
+#infoSection p {
+    font-size: 18px; 
+    line-height: 1.6; 
+}
+
+.button {
+    background-color: #fff;
+    color: #007bff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+
+#homepageSection {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.advantages {
+    margin-top: 40px;
+}
+
+.advantages h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.advantages ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.specialists {
+    margin-top: 40px;
+}
+
+.specialist {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.specialist img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#aboutUsSection {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.specialists h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+#contactSection {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+
+#gallerySection {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.gallery h2 {
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+#reviewsSection {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#reviewsSection .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#reviewsSection h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+
+#addReviewSection {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#addReviewSection h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#reviewForm input,
+#reviewForm textarea,
+#reviewForm button {
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#reviewForm textarea {
+    height: 120px;
+}
+
+#reviewForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reviewForm button:hover {
+    background-color: #0056b3;
+}
+
+
+#reviewsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.review {
+    flex: 1 0 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review .rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rating {
+    font-size: 24px;
+    color: #ffc107;
+    margin-right: 5px;
+}
+
+.review .reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #007bff;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .review {
+        flex: 1 0 100%;
+    }
+}
+
+
+.star-input {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.star-input:hover {
+    transform: scale(1.2);
+}
+
+.star-input.highlight {
+    color: #ffc107;
+}
+
+
+#repairServicesSection {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#repairServicesSection .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#repairServicesSection h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+
+#repairTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#repairTable th,
+#repairTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#repairTable th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#repairTable td {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+#repairTable tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+#repairTable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+#repairTable tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+#tooltip::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#tooltip {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+#tooltip::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#contactForm {
+    margin-top: 20px;
+}
+
+#contactForm div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#feedbackMessage {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+
+#homepageSection {
+    padding: 40px;
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+button img {
+    width: 30px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+
+/* Hover Effect */
+button:hover img {
+    transform: scale(1.1); /* Suurenda pilti nupu kohale hiirega liikudes */
+}
+
+/* Active State (Optional) */
+button.active img {
+    filter: brightness(1.2); /* Lisa aktiivsele keelenupule veidi heledust */
+}

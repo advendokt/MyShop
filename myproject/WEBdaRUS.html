@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advendokt Tech Repair</title>
+    <link rel="stylesheet" type="text/css" href="stylecss.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content container">
+            <h1>Advendokt IT-Tech</h1>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank"><img src="FB.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                <a href="https://discord.gg/DWbEH4HGDa" target="_blank"><img src="discord2.png" alt="Discord"></a>
+            </div>
+        </div>
+        <button onclick="changeLanguage('en')"><img src="ENG.png" alt="English Flag"></button>
+        <button onclick="changeLanguage('et')"><img src="ET.png" alt="Estonian Flag"></button>
+        <button onclick="changeLanguage('ru')"><img src="RUS.png" alt="English Flag"></button>
+        <div id="numberRain"></div>
+        <div class="falling-number">42</div>
+    </header>
+
+    <nav>
+        <button class="button" data-section="infoSection">Информация</button>
+        <button class="button" data-section="homepageSection">Главная</button>
+        <button class="button" data-section="repairServicesSection">Услуги по ремонту</button>
+        <button class="button" data-section="aboutUsSection">О нас</button>
+        <button class="button" data-section="contactSection">Контакты</button>
+        <button class="button" data-section="gallerySection">Галерея</button>
+        <button class="button" data-section="reviewsSection">Отзывы</button>
+    </nav>
+
+    <main>
+        <section id="infoSection" class="section">
+            <div class="container">
+                <div class="content">
+                    <h2>Добро пожаловать в Advendokt IT-Tech</h2>
+                    <p>
+                        В Advendokt IT-Tech мы специализируемся на предоставлении экспертных решений для всех ваших технических потребностей. Будь то ремонт, апгрейды или IT-услуги, мы позаботимся о вас.
+                    </p>
+                    <p>
+                        Исследуйте наш веб-сайт и откройте для себя широкий спектр услуг, направленных на улучшение вашего цифрового опыта. Свяжитесь с нами сегодня, чтобы начать!
+                    </p>
+                    <!-- Кнопка для прокрутки к секции с услугами -->
+                    <a data-section="repairServicesSection" class="button">Изучить услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="homepageSection" class="section">
+            <div class="container">
+                <h2>Качественный технический ремонт</h2>
+                <p>
+                    Мы специализируемся на ремонте широкого спектра устройств, включая ПК, смартфоны, ноутбуки и другие IT-системы. Наша команда опытных техников посвящена предоставлению высококачественных услуг по ремонту. Будь то аппаратная проблема, проблема с программным обеспечением или модернизация, мы вас покрываем.
+                </p>
+                <p>
+                    Мы используем новейшие технологии и высококачественные запчасти, чтобы гарантировать отличное состояние ваших устройств. Ваше удовлетворение - наш приоритет, и мы стремимся сделать ваш опыт по ремонту техники максимально комфортным.
+                </p>
+        
+                <!-- Секция преимуществ -->
+                <div class="advantages">
+                    <h3>Почему выбирают нас?</h3>
+                    <ul>
+                        <li>Быстрые и надежные ремонты</li>
+                        <li>Опытные техники</li>
+                        <li>Высококачественные запчасти</li>
+                        <li>Прозрачная ценовая политика</li>
+                        <li>Отличное обслуживание клиентов</li>
+                    </ul>
+                </div>
+
+                <div class="specialists">
+                    <h3>Познакомьтесь с нашими специалистами</h3>
+                    <div class="specialist">
+                        <img src="specialist1.jpg" alt="Специалист 1">
+                        <h4>Иван Иванов</h4>
+                        <p>Специалист по аппаратным вопросам</p>
+                    </div>
+                    <div class="specialist">
+                        <img src="specialist2.jpg" alt="Специалист 2">
+                        <h4>Мария Петрова</h4>
+                        <p>Гуру по программному обеспечению</p>
+                    </div>
+                    <div class="specialist">
+                        <img src="specialist3.jpg" alt="Специалист 3">
+                        <h4>Алексей Сидоров</h4>
+                        <p>Специалист по ремонту мобильных устройств</p>
+                    </div>
+                </div>
+        
+                <!-- Секция Часто Задаваемых Вопросов -->
+                <div class="faq">
+                    <h3>Часто задаваемые вопросы</h3>
+                    <div class="question">
+                        <h4>Какие типы устройств вы ремонтируете?</h4>
+                        <p>Мы ремонтируем широкий спектр устройств, включая ПК, ноутбуки, смартфоны, планшеты и другие IT-системы.</p>
+                    </div>
+                    <div class="question">
+                        <h4>Сколько времени занимает типичный ремонт?</h4>
+                        <p>Время ремонта может варьироваться в зависимости от проблемы, но мы стремимся выполнить ремонт как можно быстрее, не ущемляя качество.</p>
+                    </div>
+                    <div class="question">
+                        <h4>Вы предоставляете гарантию на ремонт?</h4>
+                        <p>Да, мы предоставляем гарантию на наши ремонтные работы. Пожалуйста, свяжитесь с нами для получения дополнительной информации.</p>
+                    </div>
+                </div>
+        
+                <!-- Призыв к действию -->
+                <div class="cta">
+                    <h3>Готовы отремонтировать ваше устройство?</h3>
+                    <p>Свяжитесь с нами сегодня, чтобы записаться на ремонт или запросить смету!</p>
+                    <a data-section="contactSection" class="button">Связаться с нами</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="repairServicesSection" class="section">
+            <div class="container">
+                <h2>Услуги по ремонту</h2>
+                <table id="repairTable">
+                    <thead>
+                        <tr>
+                            <th>Устройство</th>
+                            <th>Тип ремонта</th>
+                            <th>Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ПК</td>
+                            <td data-tooltip="Комплексное тестирование аппаратных и программных компонентов для диагностики проблем и выявления неисправностей.">Тестирование</td>
+                            <td>100$</td>
+                        </tr>
+                        <tr>
+                            <td>Смартфон</td>
+                            <td data-tooltip="Замена батареи - замена батареи устройства на новую для восстановления производительности батареи.">Замена батареи</td>
+                            <td>50$</td>
+                        </tr>
+                        <tr>
+                            <td>Смартфон</td>
+                            <td data-tooltip="Замена экрана - замена поврежденного экрана на новую сборку экрана. Стоимость включает цену экрана.">Замена экрана</td>
+                            <td>50$ + стоимость экрана</td>
+                        </tr>
+                        <tr>
+                            <td>Смартфон</td>
+                            <td data-tooltip="Ремонт или замена камеры устройства для восстановления функциональности камеры.">Ремонт камеры</td>
+                            <td>60$</td>
+                        </tr>
+                        <tr>
+                            <td>Ноутбук</td>
+                            <td data-tooltip="Ремонт или замена разъема зарядки для восстановления возможности зарядки.">Ремонт разъема зарядки</td>
+                            <td>70$</td>
+                        </tr>
+                        <tr>
+                            <td>Ноутбук</td>
+                            <td data-tooltip="Модернизация жесткого диска - установка нового жесткого диска с большей емкостью для обновления хранилища.">Модернизация жесткого диска</td>
+                            <td>120$</td>
+                        </tr>
+                        <tr>
+                            <td>Другие IT-системы</td>
+                            <td data-tooltip="Ремонт аппаратуры - комплексные услуги по ремонту других IT-систем. Свяжитесь с нами для получения дополнительной информации.">Ремонт аппаратуры</td>
+                            <td>По запросу</td>
+                        </tr>
+                        <tr>
+                            <td>Сложный ПК</td>
+                            <td data-tooltip="Ремонт системы - расширенные услуги по ремонту сложных проблем ПК. Включает диагностику и ремонт.">Ремонт системы</td>
+                            <td>По запросу + 150$</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="tooltip"></div>
+            </div>
+        </section>
+
+        <section id="aboutUsSection" class="section">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>
+                    В Tech Repair Shop мы страстно увлечены предоставлением первоклассных услуг по ремонту всех ваших электронных устройств. С годами опыта наши квалифицированные техники посвящены исправлению ваших устройств эффективно и с заботой.
+                </p>
+                <p>
+                    Мы используем высококачественные комплектующие и новейшие технологии, чтобы гарантировать лучшие результаты. Удовлетворение клиентов - наш главный приоритет, и мы стремимся сделать ваш опыт по ремонту техники максимально безпроблемным.
+                </p>
+                <h3>Наша команда</h3>
+                <p>
+                    Наша команда состоит из сертифицированных профессионалов с опытом в различных областях IT и ремонта электроники. Мы стремимся предоставлять исключительный сервис и решения, адаптированные к вашим потребностям.
+                </p>
+                <!-- Дополнительное содержимое -->
+                <h3>Почему выбирать нас?</h3>
+                <ul>
+                    <li>Опытные и сертифицированные техники</li>
+                    <li>Высококачественные запчасти и передовые методы ремонта</li>
+                    <li>Ориентированность на клиента</li>
+                    <li>Прозрачная ценовая политика и отсутствие скрытых платежей</li>
+                    <li>Быстрое время выполнения заказа</li>
+                    <li>Удобное расположение и гибкий график работы</li>
+                </ul>
+                <h3>Наша миссия</h3>
+                <p>
+                    Наша миссия - предоставлять надежные, эффективные и доступные услуги по ремонту, обеспечивая высший уровень удовлетворенности клиентов. Мы стремимся стать вашим надежным партнером для всех ваших потребностей по ремонту техники.
+                </p>
+            </div>
+        </section>
+
+        <section id="contactSection" class="section">
+            <div class="container">
+                <h2>Свяжитесь с нами</h2>
+                <p>Если у вас есть вопросы или вам нужна помощь, свяжитесь с нами по адресу <a href="mailto:support@example.com">support@example.com</a>.</p>
+        
+                <!-- Форма обратной связи -->
+                <form id="contactForm">
+                    <div>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Отправить сообщение</button>
+                </form>
+        
+                <!-- Сообщение обратной связи -->
+                <div id="feedbackMessage"></div>
+            </div>
+        </section>
+
+        <section id="gallerySection" class="section">
+            <div class="container">
+                <h2>Галерея</h2>
+                <div class="gallery">
+                    <img src="image1.jpg" alt="Изображение галереи 1">
+                    <img src="image2.jpg" alt="Изображение галереи 2">
+                    <img src="image3.jpg" alt="Изображение галереи 3">
+                    <!-- Добавьте больше изображений здесь -->
+                </div>
+            </div>
+        </section>
+
+        <section id="reviewsSection" class="section">
+            <div class="container">
+                <h2>Отзывы клиентов</h2>
+                <section id="addReviewSection">
+                    <h3>Оставьте отзыв</h3>
+                    <form id="reviewForm">
+                        <input type="text" id="name" placeholder="Ваше имя" required><br>
+                        <textarea id="message" placeholder="Ваш отзыв" required></textarea><br>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <span class="star-input" data-rating="1">&#9733;</span>
+                                <span class="star-input" data-rating="2">&#9733;</span>
+                                <span class="star-input" data-rating="3">&#9733;</span>
+                                <span class="star-input" data-rating="4">&#9733;</span>
+                                <span class="star-input" data-rating="5">&#9733;</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="ratingInput" value="">
+                        <button type="submit">Отправить отзыв</button>
+                    </form>
+                </section>
+                <div id="reviewsList"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scriptt.js"></script>
+</body>
+
+</html>
